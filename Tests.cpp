@@ -40,12 +40,6 @@ void convertorTest(int64_t n, int bits, int count) {
     for (int64_t prime: primes) {
         cout << prime << " ";
     }
-    std::cout << std::endl;
-    std::vector<uint8_t> byteArray = toByteArray(n);
-
-    std::cout << "Byte array representation of " << n << ":" << std::endl;
-    for (uint8_t byte: byteArray) {
-        std::cout << static_cast<int>(byte) << " ";
-    }
-
+    cout << endl;
+    printByteArray(n);
 }

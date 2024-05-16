@@ -69,12 +69,13 @@ string toBase64(int64_t n) {
 }
 
 
-vector<uint8_t> toByteArray(int64_t n) {
-    vector<uint8_t> bytes(sizeof(int64_t));
+void printByteArray(int64_t n) {
+    char byte_array[sizeof(int64_t )];
+
+    memcpy(byte_array, &n, sizeof(int64_t));
     for (size_t i = 0; i < sizeof(int64_t); ++i) {
-        bytes[sizeof(int64_t) - i - 1] = (n >> (i * 8)) & 0xFF;
+        cout << static_cast<int>(byte_array[i]) << " ";
     }
-    return bytes;
 }
 
 string toBase10(int64_t n) {

@@ -25,12 +25,4 @@ void lab1Tests() {
 
 int main() {
     lab1Tests();
-
-    int64_t enc = 799899;
-    //RSA rsa(3557, 2579, 9);
-    RSA rsa(15);
-    enc = rsa.Encrypt(enc);
-    std::cout << enc << std::endl;
-    std::cout << rsa.Decrypt(enc) << std::endl;
-
 }

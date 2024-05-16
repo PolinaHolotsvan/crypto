@@ -11,7 +11,7 @@
 
 std::string toBinary(int64_t n);
 
-std::vector<uint8_t> toByteArray(int64_t n);
+void printByteArray(int64_t n);
 
 int64_t generatePrimeWithBitLength(int bits);
 
