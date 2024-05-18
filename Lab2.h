@@ -7,6 +7,7 @@
 
 
 #include <cstdint>
+#include <string>
 
 class RSA {
 public:
@@ -22,6 +23,8 @@ public:
     int64_t Encrypt(int64_t message);
 
     int64_t Decrypt(int64_t message);
+
+    std::string SHA1(std::string message);
 };
 
 int64_t gcd(int64_t a, int64_t b);

@@ -49,7 +49,7 @@ vector<int64_t> generatePrimesForRSA(int bits) {
 
     do {
         candidate2 = generatePrimeWithBitLength(bits);
-    } while ((candidate2 / 100) * abs(candidate1 - candidate2) < 40);
+    } while ((candidate2 / 100) * abs(candidate1 - candidate2) < 20);
     return {candidate1, candidate2};
 }
 
