@@ -11,4 +11,6 @@ void millerRabinTest(int64_t n, int64_t k);
 
 void convertorTest(int64_t n, int bits, int count);
 
+void RSATest(int64_t message, int bits);
+
 #endif //CRYPTO_TESTS_H

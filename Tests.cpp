@@ -8,6 +8,7 @@
 #include "Lab2.h"
 #include "Convertor.h"
 #include "Tests.h"
+#include <chrono>
 
 using namespace std;
 
@@ -42,4 +43,19 @@ void convertorTest(int64_t n, int bits, int count) {
     }
     cout << endl;
     printByteArray(n);
+}
+
+void RSATest(int64_t message, int bits){
+    auto start = chrono::steady_clock::now();
+    RSA rsa(bits);
+    auto m1 = rsa.Encrypt(message);
+    cout << "Encrypted message: "<< m1 << endl;
+    auto m2 = rsa.Decrypt(m1);
+    cout <<"Decrypted message: "<< m2 << endl;
+    auto sign = rsa.SHA1(to_string(m2));
+    cout <<"Sha1 signature: "<< sign << endl;
+
+    auto end = chrono::steady_clock::now();
+    auto elapsed_time = chrono::duration_cast<chrono::milliseconds>(end - start).count();
+    cout << "Time taken: " << elapsed_time << " milliseconds" << std::endl;
 }

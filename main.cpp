@@ -25,12 +25,8 @@ void lab1Tests() {
 
 
 int main() {
-    RSA rsa(15);
     int64_t message = 34567890;
-    auto m1 = rsa.Encrypt(message);
-    cout << m1 << endl;
-    auto m2 = rsa.Decrypt(m1);
-    cout << m2 << endl;
-    auto sign = rsa.SHA1("abc");
-    cout << sign << endl;
+    RSATest(message, 16);
+    RSATest(message, 18);
+    RSATest(message, 20);
 }
